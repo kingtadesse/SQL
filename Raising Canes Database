@@ -1,0 +1,20 @@
+--create the restaurant database
+
+CREATE TABLE Canes (
+id Integer Primary Key,
+name Text,
+Chicken_quantity Integer,
+calories Integer,
+price Integer
+);
+
+INSERT INTO Canes VALUES (1, "Kids Meal", 3, 100, 5);
+INSERT INTO Canes VALUES (2, "Box Combo", 4, 200, 10);
+INSERT INTO Canes VALUES (3, "Caniac Combo", 5, 300, 15);
+INSERT INTO Canes VALUES (4, "Mega Caniac Combo", 6, 400, 20);
+INSERT INTO Canes VALUES (5, "Ultimate Caniac Combo", 7, 500, 25)
+;
+
+--display the database ordered by price. 
+SELECT * FROM Canes
+ORDER BY price desc; 
