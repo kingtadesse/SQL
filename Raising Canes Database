@@ -1,12 +1,12 @@
 --create the restaurant database
 
 CREATE TABLE Canes (
-id Integer Primary Key,
-name Text,
-Chicken_quantity Integer,
-calories Integer,
-price Integer
-);
+  id Integer Primary Key,
+  name Text,
+  Chicken_quantity Integer,
+  calories Integer,
+  price Integer
+  );
 
 INSERT INTO Canes VALUES (1, "Kids Meal", 3, 100, 5);
 INSERT INTO Canes VALUES (2, "Box Combo", 4, 200, 10);
