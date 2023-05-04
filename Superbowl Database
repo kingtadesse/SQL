@@ -68,6 +68,7 @@ INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,Cit
 INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,City,State) VALUES ('Jan 15 1967','I (1)','Green Bay Packers',35,'Kansas City Chiefs',10,'Bart Starr+','Memorial Coliseum','Los Angeles','California');
 
 
+
 --display the average points scored by the winners
   SELECT AVG(Winner_Pts) FROM superbowls;
 
@@ -79,6 +80,8 @@ INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,Cit
 
 --display the winners and list them from most to least points scored
   SELECT * FROM superbowls ORDER BY Winner_Pts desc;
+  
+  
   
 --display each year the San Francisco 49ers were victorious
   SELECT * FROM superbowls WHERE Winner = 'San Francisco 49ers' ORDER BY Winner_pts desc;
@@ -92,7 +95,13 @@ INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,Cit
 --display all superbowls where the winners scored more than ten and the loser scored less than 7
   SELECT * FROM superbowls WHERE Winner_Pts > 10 AND Loser_pts < 7;
   
---display assigned grades based on the count of teams that have  more than 40, 30, 20 or less points scored
+  
+  
+--display all of the losers who scored more than the average losing score
+  SELECT *, AVG(Loser_pts) AS Above_Average_Loser FROM superbowls GROUP BY Loser_pts;
+  HAVING Above_Average_Loser > 16;
+  
+--display assigned grades based on the count of teams that have more than 40, 30, 20 or less points scored
   SELECT Count(*),
      CASE
          WHEN winner_pts > 40 THEN 'Elite'
@@ -102,13 +111,3 @@ INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,Cit
      END AS 'Grades' 
      FROM superbowls
      GROUP BY Grades;
-
-
-
-
-
-
-
-
-
-
