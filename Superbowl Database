@@ -81,7 +81,10 @@ INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,Cit
   SELECT * FROM superbowls ORDER BY Winner_Pts desc;
   
 --display each year the San Francisco 49ers were victorious
-  SELECT * FROM superbowls WHERE Winner = 'San Francisco 49ers';
+  SELECT * FROM superbowls WHERE Winner = 'San Francisco 49ers' ORDER BY Winner_pts desc;
+  
+--display each year the Dallas Cowboys finished runner up and list from most to least points scored
+  SELECT * FROM superbowls WHERE Loser = 'Dallas Cowboys' ORDER BY Loser_pts desc;
   
  --display all superbowls where the loser scored less than 7
   SELECT * FROM superbowls WHERE Loser_pts < 7;
