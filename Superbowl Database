@@ -83,7 +83,8 @@ INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,Cit
 --display each year the San Francisco 49ers were victorious
   SELECT * FROM superbowls WHERE Winner = 'San Francisco 49ers';
   
-  
+ --display all superbowls where the loser scored less than 7
+  SELECT * FROM superbowls WHERE Loser_pts < 7;
   
 --display all superbowls where the winners scored more than ten and the loser scored less than 7
   SELECT * FROM superbowls WHERE Winner_Pts > 10 AND Loser_pts < 7;
