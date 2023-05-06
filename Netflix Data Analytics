@@ -1,0 +1,6 @@
+-- Please see below for the SQL code that I am querying for a database that's holding Nexflix data to answer various questions
+
+-- 1. How many movie titles are there in the database? (excluding tv shows)
+SELECT count (*)
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+WHERE type='Movie';
