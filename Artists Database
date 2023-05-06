@@ -4,11 +4,25 @@ CREATE TABLE artists (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
     age INTEGER,
-    hometown TEXT,
-    hobby TEXT
+    hometown TEXT
 );
     
-INSERT INTO artists (name, age, hometown, hobby) VALUES ("Drake", "36", "Toronto, Canada", "travel");
-INSERT INTO artists (name, age, hometown, hobby) VALUES ("Abel Tesfaye", "33", "Toronto, Canada", "ethiopian coffee");
-INSERT INTO artists (name, age, hometown, hobby) VALUES ("Rihanna", "35", "Saint Michael, Barbados", "makeup");
+INSERT INTO artists (name, age, hometown) VALUES ("Drake", "36", "Toronto, Canada");
+INSERT INTO artists (name, age, hometown) VALUES ("Abel Tesfaye", "33", "Toronto, Canada");
+INSERT INTO artists (name, age, hometown) VALUES ("Rihanna", "35", "Saint Michael, Barbados");
+
+CREATE TABLE hobbies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    hobby TEXT
+);
+
+INSERT INTO hobbies (name, hobby) VALUES ("Drake", "travel");
+INSERT INTO hobbies (name, hobby) VALUES ("Abel Tesfaye", "ethiopian coffee");
+INSERT INTO hobbies (name, hobby) VALUES ("Rihanna", "makeup");
+
+SELECT a.name, h.hobby
+    FROM artists a
+    JOIN hobbies h
+    ON a.id = h.id;
 
