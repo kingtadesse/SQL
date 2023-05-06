@@ -1,0 +1,14 @@
+/* create a database on artists */
+
+CREATE TABLE artists (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    age INTEGER,
+    hometown TEXT,
+    hobby TEXT
+);
+    
+INSERT INTO artists (name, age, hometown, hobby) VALUES ("Drake", "36", "Toronto, Canada", "travel");
+INSERT INTO artists (name, age, hometown, hobby) VALUES ("Abel Tesfaye", "33", "Toronto, Canada", "ethiopian coffee");
+INSERT INTO artists (name, age, hometown, hobby) VALUES ("Rihanna", "35", "Saint Michael, Barbados", "makeup");
+
