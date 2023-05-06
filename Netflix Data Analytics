@@ -4,3 +4,10 @@
 SELECT count (*)
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
 WHERE type='Movie';
+
+-- 2. When was the most recent batch of tv shows and/or movies added to the database? 
+SELECT max(date(date_added))
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+
+-- 3. List all movies and tv shows, then order them alphabetically. 
+
