@@ -10,4 +10,9 @@ SELECT max(date(date_added))
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
 
 -- 3. List all movies and tv shows, then order them alphabetically. 
+SELECT title
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+ORDER BY title asc;
+
+
 
