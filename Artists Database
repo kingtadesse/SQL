@@ -21,7 +21,9 @@ INSERT INTO hobbies (name, hobby) VALUES ("Drake", "travel");
 INSERT INTO hobbies (name, hobby) VALUES ("Abel Tesfaye", "ethiopian coffee");
 INSERT INTO hobbies (name, hobby) VALUES ("Rihanna", "makeup");
 
+
 /* create a list of artists and their hobbies */
+
 SELECT a.name, h.hobby
     FROM artists a
     JOIN hobbies h
