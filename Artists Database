@@ -28,4 +28,11 @@ SELECT a.name, h.hobby
     FROM artists a
     JOIN hobbies h
     ON a.id = h.id;
+    
+/* display a list of artists and their current age */
+
+SELECT h.name, a.age
+    FROM artists a
+    JOIN hobbies h
+    ON a.id = h.id;
 
