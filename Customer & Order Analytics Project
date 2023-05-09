@@ -28,7 +28,18 @@ FROM BIT_DB.JanSales Jan
 GROUP BY price, product
 ORDER BY price ASC LIMIT 1
 
--- 
+-- 5. What is the total revenue for each product sold in January?
+
+
+
+
+
+
+
+
+
+
+
 
 
 
