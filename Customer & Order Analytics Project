@@ -71,7 +71,13 @@ WHERE product LIKE '%Headphones'
 GROUP BY product;
 
 -- 11. #3. What was the average amount spent per account in February?
+SELECT avg(quantity*price)
+FROM BIT_DB.FebSales feb
 
+LEFT JOIN BIT_DB.customers cust
+ON feb.orderid = cust.order_id
+WHERE length(orderid) = 6 
+AND orderid <> 'Order ID'
 
 
 
