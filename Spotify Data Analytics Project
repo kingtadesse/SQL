@@ -37,7 +37,6 @@ ORDER BY popularity desc
 LIMIT 10;
 
 -- Finally, I determined the relationship between popularity and tempo
-SELECT * FROM BIT_DB.Spotifydata;
 SELECT artist_name, popularity, tempo
 FROM BIT_DB.Spotifydata
 ORDER BY tempo desc
