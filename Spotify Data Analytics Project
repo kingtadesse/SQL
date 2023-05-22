@@ -26,19 +26,21 @@ time_signature integer NOT NULL
 -- Next, I inserted the Spotify Data .csv into the table and explored the data using the following SQL
 
 -- I determined the avg popularity, danceability, and energy by artist and track 
-SELECT
-artist_name
-,track_name
-,avg(popularity)
-,avg(danceability)
-,avg(energy)
+SELECT artist_name, track_name, avg(popularity), avg(danceability), avg(energy)
 FROM BIT_DB.spotifydata
 GROUP BY artist_name, track_name;
 
--- Finally, I determined who the Top 10 artists are based on popularity
+-- Next, I determined who the Top 10 artists are based on popularity
 SELECT track_name, artist_name, popularity
 FROM BIT_DB.spotifydata
 ORDER BY popularity desc
 LIMIT 10;
+
+-- Finally, I determined the relationship between popularity and tempo
+SELECT * FROM BIT_DB.Spotifydata;
+SELECT artist_name, popularity, tempo
+FROM BIT_DB.Spotifydata
+ORDER BY tempo desc
+LIMIT 15;
 
 
