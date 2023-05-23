@@ -36,10 +36,20 @@ FROM BIT_DB.spotifydata
 ORDER BY popularity desc
 LIMIT 10;
 
--- Finally, I determined the relationship between popularity and tempo
+-- Afterwards, I determined the relationship between popularity and tempo
 SELECT artist_name, popularity, tempo
 FROM BIT_DB.Spotifydata
 ORDER BY tempo desc
 LIMIT 15;
 
+-- Finally I created a list of the artists with a popularity score of 90 or above (Utilizing a Common Table Expression, aka CTE)
+WITH popularity_average_CTE AS (
+SELECT s.artist_name, AVG(s.popularity) AS average_popularity
+FROM SpotifyData s 
+GROUP BY s.artist_name
+)
+ 
+SELECT  artist_name, average_popularity, 'Top Star' AS tag
+FROM popularity_average_CTE
+WHERE average_popularity>=90;
 
