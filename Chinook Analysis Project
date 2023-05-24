@@ -6,11 +6,11 @@
 SELECT * FROM Chinook.artists 
 ORDER BY name desc;
 
--- Find the invoices of customers who are from Brazil including the customer's full name, invoice ID, date of the invoice, and billing country
-SELECT cust.FirstName, cust.LastName, inv.InvoiceId, inv.BillingCountry, inv.InvoiceDate
-FROM chinook.invoices as inv 
+-- Select all invoices for customers who are from Brazil including the customer's full name, invoice ID, date of the invoice, and billing country
+SELECT cust.FirstName, cust.LastName, inv.InvoiceId, inv.InvoiceDate, inv.BillingCountry
+FROM chinook.invoices as inv
 
-LEFT JOIN chinook.customers as cust 
+LEFT JOIN chinook.customers as cust
 ON inv.CustomerId = cust.CustomerId 
 WHERE inv.BillingCountry = "Brazil";
 
