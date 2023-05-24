@@ -22,7 +22,7 @@ JOIN chinook.customers cust ON cust.supportrepid = emp.employeeid
 JOIN chinook.invoices inv ON inv.customerid = cust.customerid;
 
 -- Write a query that includes the purchased track name & artist name with each invoice line ID
-SELECT ar.name as artist, t.name as track, i.invoicelineid
+SELECT t.name as track, ar.name as artist, i.invoicelineid
 FROM chinook.invoice_items i
 
 LEFT JOIN chinook.tracks t 
