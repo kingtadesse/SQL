@@ -2,9 +2,11 @@
 -- Once I inserted the data, I was able to perform data analysis using SQL within SQLite Studio
 -- Please see below for a variation of questions explored utilizing the data from Chinook's dataset
 
--- Select all artists and order them by name in descending order
-SELECT * FROM chinook.artists 
-ORDER BY name desc;
+
+-- Calculate the quantity of invoices generated in 2009
+SELECT COUNT (*)
+FROM chinook.invoices
+WHERE invoicedate BETWEEN '2009-01-01' AND '2009-12-31';
 
 -- Select all invoices for customers who are from Brazil including the customer's full name, invoice ID, date of the invoice, and billing country
 SELECT cust.firstname, cust.lastname, inv.invoiceid, inv.invoicedate, inv.billingcountry
@@ -25,11 +27,14 @@ JOIN chinook.invoices inv ON inv.customerid = cust.customerid;
 SELECT t.name as track, ar.name as artist, i.invoicelineid
 FROM chinook.invoice_items i
 
-LEFT JOIN chinook.tracks t 
+LEFT JOIN chinook.tracks t
 ON i.trackid = t.trackid
 INNER JOIN chinook.albums a
 ON a.albumid = t.albumid
 LEFT JOIN chinook.artists ar
 ON ar.artistid = a.artistid;
+
+
+
 
 
