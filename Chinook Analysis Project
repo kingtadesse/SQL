@@ -14,5 +14,13 @@ LEFT JOIN chinook.customers as cust
 ON inv.customerid = cust.customerid 
 WHERE inv.billingcountry = "Brazil";
 
+-- Provide a query that shows the invoices associated with each sales agent including the agent's full name
+SELECT emp.firstname, emp.lastname, inv.invoiceid
+FROM chinook.employees emp
+
+JOIN chinook.customers cust ON cust.supportrepid = emp.employeeid
+JOIN chinook.invoices inv ON inv.customerid = cust.customerid;
+
+
 
 
