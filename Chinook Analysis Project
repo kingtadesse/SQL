@@ -1,6 +1,6 @@
 -- For this project, I downloaded a dataset titled Chinook
--- Once I inserted the data, I was able to perform data analysis using SQLite Studio
--- Please see below for a variety of questions explored utilizing the data from Chinook's dataset
+-- Once I inserted the data, I was able to perform data analysis using SQL within SQLite Studio
+-- Please see below for a variation of questions explored utilizing the data from Chinook's dataset
 
 -- Select all artists and order them by name in descending order
 SELECT * FROM Chinook.artists 
