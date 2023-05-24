@@ -34,6 +34,19 @@ ON a.albumid = t.albumid
 LEFT JOIN chinook.artists ar
 ON ar.artistid = a.artistid;
 
+-- Display the total sales made by each sales agent
+SELECT emp.firstname, emp.lastname,
+ROUND (SUM(inv.total), 2) as 'Total Sales' 
+FROM chinook.employees emp
+
+JOIN chinook.customers cust 
+ON cust.supportrepid = emp.employeeid
+JOIN chinook.invoices inv 
+ON inv.customerid = cust.customerid
+WHERE emp.title = 'Sales Support Agent' 
+GROUP BY emp.firstname;
+
+
 
 
 
