@@ -2,4 +2,9 @@
 -- Once I inserted the data, I was able to perform data analysis using SQLite Studio
 -- Please see below for a variety of questions explored utilizing the data from Chinook's dataset
 
+-- Select all artists and order them by name in descending order
+SELECT * FROM Chinook.artists 
+ORDER BY name desc;
+
+-- Show only the Customers from Brazil
 
