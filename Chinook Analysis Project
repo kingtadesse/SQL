@@ -3,12 +3,12 @@
 -- Please see below for a variation of questions explored utilizing the data from Chinook's dataset
 
 
--- Calculate the quantity of invoices generated in 2009
+-- 1. Calculate the quantity of invoices generated in 2009
 SELECT COUNT (*)
 FROM chinook.invoices
 WHERE invoicedate BETWEEN '2009-01-01' AND '2009-12-31';
 
--- Select all invoices for customers who are from Brazil including the customer's full name, invoice ID, date of the invoice, and billing country
+-- 2. Select all invoices for customers who are from Brazil including the customer's full name, invoice ID, date of the invoice, and billing country
 SELECT cust.firstname, cust.lastname, inv.invoiceid, inv.invoicedate, inv.billingcountry
 FROM chinook.invoices as inv
 
@@ -16,14 +16,14 @@ LEFT JOIN chinook.customers as cust
 ON inv.customerid = cust.customerid 
 WHERE inv.billingcountry = "Brazil";
 
--- Provide a query that shows the invoices associated with each sales agent including the agent's full name
+-- 3. Provide a query that shows the invoices associated with each sales agent including the agent's full name
 SELECT emp.firstname, emp.lastname, inv.invoiceid
 FROM chinook.employees emp
 
 JOIN chinook.customers cust ON cust.supportrepid = emp.employeeid
 JOIN chinook.invoices inv ON inv.customerid = cust.customerid;
 
--- Write a query that includes the purchased track name & artist name with each invoice line ID
+-- 4. Write a query that includes the purchased track name & artist name with each invoice line ID
 SELECT t.name as track, ar.name as artist, i.invoicelineid
 FROM chinook.invoice_items i
 
@@ -34,7 +34,7 @@ ON a.albumid = t.albumid
 LEFT JOIN chinook.artists ar
 ON ar.artistid = a.artistid;
 
--- Display the total sales made by each sales agent
+-- 5. Display the total sales made by each sales agent
 SELECT emp.firstname, emp.lastname,
 ROUND (SUM(inv.total), 2) as 'Total Sales' 
 FROM chinook.employees emp
