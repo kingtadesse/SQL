@@ -1,7 +1,7 @@
 --create the superbowl database
 
 CREATE TABLE superbowls(
-  Date      TEXT PRIMARY KEY,
+  Date       TEXT PRIMARY KEY,
   SB         TEXT,
   Winner     TEXT,
   Winner_Pts INTEGER,
