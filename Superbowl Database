@@ -12,6 +12,10 @@ CREATE TABLE superbowls(
   City       TEXT,
   State      TEXT
 );
+INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,City,State) VALUES ('Feb 11 2024','LVIII (58)','Kansas City Chiefs',25,'San Francisco 49ers',22,'Patrick Mahomes','Allegiant Stadium','Las Vegas','Nevada');
+INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,City,State) VALUES ('Feb 12 2023','LVII (57)','Kansas City Chiefs',38,'Philadelphia Eagles',35,'Patrick Mahomes','State Farm Stadium','Glendale','Arizona');
+INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,City,State) VALUES ('Feb 13 2022','LVI (56)','Los Angeles Rams',23,'Cincinnati Bengals',20,'Cooper Kupp','SoFi Stadium','Inglewood','California');
+INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,City,State) VALUES ('Feb 7 2021','LV (55)','Tampa Bay Buccaneers',31,'Kansas City Chiefs',9,'Tom Brady','Raymond James Stadium','Tampa','Florida');
 INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,City,State) VALUES ('Feb 2 2020','LIV (54)','Kansas City Chiefs',31,'San Francisco 49ers',20,'Patrick Mahomes','Hard Rock Stadium','Miami Gardens','Florida');
 INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,City,State) VALUES ('Feb 3 2019','LIII (53)','New England Patriots',13,'Los Angeles Rams',3,'Julian Edelman','Mercedes-Benz Stadium','Atlanta','Georgia');
 INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,City,State) VALUES ('Feb 4 2018','LII (52)','Philadelphia Eagles',41,'New England Patriots',33,'Nick Foles','U.S. Bank Stadium','Minneapolis','Minnesota');
